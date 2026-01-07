@@ -2,6 +2,8 @@
 
 A modern, elegant art gallery and e-commerce website built with React, TypeScript, and Vite. This platform showcases artwork, handles online sales through Stripe, manages commissions, and includes membership features.
 
+> **Live Site**: https://armymp33.github.io/MajesticArt/
+
 ## 🎨 Features
 
 - **Art Gallery**: Beautiful showcase of artwork with filtering and search
