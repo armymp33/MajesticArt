@@ -8,21 +8,19 @@
     <link rel="icon" type="image/svg+xml" href="/MajesticArt/placeholder.svg" />
     <script>
       // Redirect to index.html for GitHub Pages SPA routing
-      // This ensures all routes work correctly with client-side routing
-      var pathSegmentsToKeep = 1;
-      var l = window.location;
-      var redirectPath = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/';
-      if (l.pathname.endsWith('/')) {
-        redirectPath = redirectPath.slice(0, -1);
+      var path = window.location.pathname;
+      var basePath = '/MajesticArt';
+      var indexPath = basePath + '/index.html';
+      
+      // Preserve query string and hash
+      if (window.location.search) {
+        indexPath += window.location.search;
       }
-      redirectPath += '/index.html';
-      if (l.search) {
-        redirectPath += l.search;
+      if (window.location.hash) {
+        indexPath += window.location.hash;
       }
-      if (l.hash) {
-        redirectPath += l.hash;
-      }
-      window.location.replace(redirectPath);
+      
+      window.location.replace(indexPath);
     </script>
   </head>
   <body>
