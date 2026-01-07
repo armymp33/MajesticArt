@@ -1,5 +1,6 @@
 import { Artwork, heroImage } from '@/data/artworks';
 import { getArtworks } from '@/services/artworkService';
+import { getAssetPath } from '@/lib/utils';
 import React, { useEffect, useState } from 'react';
 interface HomePageProps {
   setCurrentPage: (page: string) => void;
@@ -139,7 +140,7 @@ const HomePage: React.FC<HomePageProps> = ({
             </div>
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-[#9B86BD]/20 to-[#D4AF37]/20 rounded-lg overflow-hidden">
-                <img src={featuredArtworks[0]?.image || '/japanese-imperial-te.png'} alt="Featured artwork" className="w-full h-full object-cover" />
+                <img src={featuredArtworks[0]?.image?.startsWith('http') ? featuredArtworks[0].image : getAssetPath(featuredArtworks[0]?.image || '/japanese-imperial-te.png')} alt="Featured artwork" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 border-2 border-[#D4AF37] rounded-lg" />
             </div>

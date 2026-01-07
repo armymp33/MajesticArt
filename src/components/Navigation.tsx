@@ -1,4 +1,5 @@
 import { useCart } from '@/contexts/CartContext';
+import { getAssetPath } from '@/lib/utils';
 import React, { useState, useEffect } from 'react';
 interface NavigationProps {
   currentPage: string;
@@ -59,7 +60,7 @@ const Navigation: React.FC<NavigationProps> = ({
           {/* Logo */}
           <button onClick={() => setCurrentPage('home')} className="flex items-center space-x-2 group">
             <div className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center ring-2 ring-[#D4AF37]/20">
-              <img src="/japanese-imperial-te.png" alt="Logo" className="w-full h-full object-cover" />
+              <img src={getAssetPath('/japanese-imperial-te.png')} alt="Logo" className="w-full h-full object-cover" />
             </div>
             <span className="text-xl font-serif text-[#2C2C2C] group-hover:text-[#9B86BD] transition-colors">Majestic Art</span>
           </button>
