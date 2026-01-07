@@ -1,0 +1,2 @@
+# MajesticArt
+MajesticArt Website
