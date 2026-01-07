@@ -35,7 +35,7 @@ const HomePage: React.FC<HomePageProps> = ({
       {/* Hero Section */}
       <section className="relative h-screen min-h-[600px] flex items-center">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-        backgroundImage: `url(${heroImage})`
+        backgroundImage: `url(${getAssetPath(heroImage)})`
       }}>
           <div className="absolute inset-0 bg-gradient-to-r from-[#2C2C2C]/80 via-[#2C2C2C]/50 to-transparent" />
         </div>

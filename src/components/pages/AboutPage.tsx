@@ -1,5 +1,6 @@
 import React from 'react';
 import { artistImage, artworks } from '@/data/artworks';
+import { getAssetPath } from '@/lib/utils';
 
 interface AboutPageProps {
   setCurrentPage: (page: string) => void;
@@ -38,7 +39,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ setCurrentPage }) => {
             <div className="order-1 lg:order-2">
               <div className="relative">
                 <img
-                  src={artistImage}
+                  src={getAssetPath(artistImage)}
                   alt="The Artist"
                   className="w-full aspect-square object-cover rounded-lg shadow-xl"
                 />
