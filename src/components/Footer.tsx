@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { supabase } from '@/lib/supabase';
 interface FooterProps {
   setCurrentPage: (page: string) => void;
@@ -179,6 +180,7 @@ const Footer: React.FC<FooterProps> = ({
             <div className="flex items-center gap-6">
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+              <Link to="/admin/login" className="hover:text-white transition-colors">Admin</Link>
             </div>
           </div>
         </div>
