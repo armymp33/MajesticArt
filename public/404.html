@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Studio Gallery</title>
+    <meta name="description" content="A platform for selling art, offering commissions, and transforming artwork into canvases with a minimalist design." />
+    <link rel="icon" type="image/svg+xml" href="/MajesticArt/placeholder.svg" />
+    <script>
+      // Redirect to index.html for GitHub Pages SPA routing
+      // This ensures all routes work correctly with client-side routing
+      var pathSegmentsToKeep = 1;
+      var l = window.location;
+      var redirectPath = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/';
+      if (l.pathname.endsWith('/')) {
+        redirectPath = redirectPath.slice(0, -1);
+      }
+      redirectPath += '/index.html';
+      if (l.search) {
+        redirectPath += l.search;
+      }
+      if (l.hash) {
+        redirectPath += l.hash;
+      }
+      window.location.replace(redirectPath);
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
+
